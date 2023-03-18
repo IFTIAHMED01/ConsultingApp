@@ -1,13 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Consulting Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
-<h1>Result</h1>
+<body style="width:800px;background-color:black;font-family: Arial, Helvetica, sans-serif;color:white;">
+<h1>Thank you so much for contacting us. We will be in touch with you shortly.</h1>
+<hr>
 <p th:text="'id: ' + ${greeting.id}" />
+<p th:text="'name: ' + ${greeting.name}" />
+<p th:text="'email: ' + ${greeting.email}" />
 <p th:text="'content: ' + ${greeting.content}" />
-<a href="/greeting">Submit another message</a>
+<hr>
+<a href="/greeting">Submit another message to book another appointment</a>
 </body>
 </html>

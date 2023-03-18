@@ -1,14 +1,29 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Getting Started: Handling Consulting Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+     label.a {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        text-align: left;
+      }
+
+    </style>
 </head>
-<body>
-<h1>Form</h1>
+<body style="width:800px;background-color:black;font-family: Arial, Helvetica, sans-serif;color:white;" >
+<h1>Consulting Form</h1>
+<hr>
+<p> Please fill in all fields and click Submit to get in touch with us</p>
+<h2>User Information</h2>
 <form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
-    <p>Id: <input type="text" th:field="*{id}" /></p>
+    <p>ContactNumber: <input type="text" th:field="*{id}" /></p>
+    <p>name: <input type="text" th:field="*{name}" /></p>
+    <p>email: <input type="text" th:field="*{email}" /></p>
     <p>Message: <input type="text" th:field="*{content}" /></p>
+    <hr>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>
